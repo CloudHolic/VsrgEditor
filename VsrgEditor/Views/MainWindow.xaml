@@ -4,13 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:VsrgEditor.ViewModels"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
         mc:Ignorable="d"
+        ui:WindowHelper.UseModernWindowStyle="True"
         Title="MainWindow" Height="450" Width="800">
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
 
     <Grid>
-
+        <ui:SimpleStackPanel Margin="12" Spacing="24">
+            <TextBlock Text="My first ModernWPF app" Style="{StaticResource HeaderTextBlockStyle}"/>
+            <Button Content="I am a button" />
+            <Button Content="I am an accent button" Style="{StaticResource AccentButtonStyle}"/>
+        </ui:SimpleStackPanel>
     </Grid>
 </Window>
